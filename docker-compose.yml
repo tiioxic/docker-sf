@@ -38,10 +38,10 @@ services:
         build: php
         container_name: site_web
         ports:
-          - "8000:80"
+          - "8000:8000"
         volumes:
             - ./php/vhosts:/etc/apache2/sites-enabled
-            - ./:/var/www
+            - ./project:/var/www
         restart: always
         networks:
             - dev
